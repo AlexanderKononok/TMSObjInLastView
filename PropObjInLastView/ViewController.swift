@@ -19,11 +19,13 @@ class ViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let secondViewController = storyboard.instantiateViewController(identifier: String(describing: SecondViewController.self)) as! SecondViewController
     
-    secondViewController.modalPresentationStyle = .fullScreen
-    self.present(secondViewController, animated: true)
+//    secondViewController.modalPresentationStyle = .fullScreen
+//    self.present(secondViewController, animated: true)
     
     secondViewController.carObj = volvo
-    show(secondViewController, sender: nil)
+    //show(secondViewController, sender: nil)
+    
+    navigationController?.pushViewController(secondViewController, animated: true)
   }
   
 }
